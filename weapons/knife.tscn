@@ -48,15 +48,15 @@ transform = Transform3D(0.00116905, 0.000638952, 0.0632679, 0.0192047, 0.0602898
 
 [node name="GPUTrail3D" type="GPUParticles3D" parent="handle_low_001" index="0"]
 transform = Transform3D(9.3542, -0.0280328, 12.7329, -12.7362, -0.015321, 9.35294, -0.0442252, -1.51708, -0.329735, -0.183853, 0.0756295, -3.2056)
-amount = 28
-lifetime = 28.0
+amount = 27
+lifetime = 27.0
 explosiveness = 1.0
 fixed_fps = 59
 process_material = SubResource("ShaderMaterial_b3upq")
 draw_pass_1 = SubResource("QuadMesh_oi7aq")
 script = ExtResource("5_88ny0")
-length = 28
-length_seconds = 0.474576
+length = 27
+length_seconds = 0.457627
 texture = ExtResource("5_1vx1p")
 color_ramp = SubResource("GradientTexture1D_q6kld")
 curve = SubResource("CurveTexture_blcm3")

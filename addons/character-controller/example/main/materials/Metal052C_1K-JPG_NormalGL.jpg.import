@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://g4id30lpyu8i"
+path.s3tc="res://.godot/imported/Metal052C_1K-JPG_NormalGL.jpg-cfc3765ff99152fe4ef3ce6699d0fabc.s3tc.ctex"
+path.etc2="res://.godot/imported/Metal052C_1K-JPG_NormalGL.jpg-cfc3765ff99152fe4ef3ce6699d0fabc.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://addons/character-controller/example/main/materials/Metal052C_1K-JPG_NormalGL.jpg"
+dest_files=["res://.godot/imported/Metal052C_1K-JPG_NormalGL.jpg-cfc3765ff99152fe4ef3ce6699d0fabc.s3tc.ctex", "res://.godot/imported/Metal052C_1K-JPG_NormalGL.jpg-cfc3765ff99152fe4ef3ce6699d0fabc.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://addons/character-controller/example/main/materials/Metal052C_1K-JPG_NormalGL.jpg"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0
