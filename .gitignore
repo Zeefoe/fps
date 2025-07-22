@@ -1,0 +1,8 @@
+
+.godot/
+.tscn.d/
+
+export_presets.cfg
+override.cfg
+
+.mono/

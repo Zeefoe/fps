@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnajx7jwr63hm"]
+
+[ext_resource type="PackedScene" uid="uid://c2t6smyr8xtty" path="res://addons/character-controller/example/main/level.tscn" id="1_a202f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Level" parent="." instance=ExtResource("1_a202f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93299, 0, -3.89651)

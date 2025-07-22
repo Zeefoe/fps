@@ -1,0 +1,68 @@
+[gd_scene load_steps=15 format=3 uid="uid://c04x68feol6qi"]
+
+[ext_resource type="PackedScene" uid="uid://cb47n3c8uy3j5" path="res://weapons/knifecourse.glb" id="1_yyc7w"]
+[ext_resource type="Script" uid="uid://c6x2g86rgk2eo" path="res://weapons/knife.gd" id="2_mjnv2"]
+[ext_resource type="Shader" uid="uid://cbwdjyjtpawar" path="res://GPUTrail-main/shaders/trail.gdshader" id="3_nkcxn"]
+[ext_resource type="Shader" uid="uid://bwkil6rogrmnd" path="res://GPUTrail-main/shaders/trail_draw_pass.gdshader" id="4_1vx1p"]
+[ext_resource type="Texture2D" uid="uid://ca31gb751etrd" path="res://weapons/textures/T_VFX_Trail223.png" id="5_1vx1p"]
+[ext_resource type="Script" uid="uid://cjlwu5lqd1gjj" path="res://GPUTrail-main/GPUTrail3D.gd" id="5_88ny0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b3upq"]
+shader = ExtResource("3_nkcxn")
+
+[sub_resource type="Gradient" id="Gradient_8yr11"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_q6kld"]
+gradient = SubResource("Gradient_8yr11")
+
+[sub_resource type="Curve" id="Curve_m5p3s"]
+bake_resolution = 16
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_blcm3"]
+curve = SubResource("Curve_m5p3s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ktjgf"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("4_1vx1p")
+shader_parameter/tex = ExtResource("5_1vx1p")
+shader_parameter/uv_offset = Vector2(0, 0)
+shader_parameter/color_ramp = SubResource("GradientTexture1D_q6kld")
+shader_parameter/curve = SubResource("CurveTexture_blcm3")
+shader_parameter/emmission_transform = Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+shader_parameter/flags = 40
+
+[sub_resource type="QuadMesh" id="QuadMesh_oi7aq"]
+material = SubResource("ShaderMaterial_ktjgf")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1vx1p"]
+
+[node name="Knife" instance=ExtResource("1_yyc7w")]
+script = ExtResource("2_mjnv2")
+
+[node name="handle_low_001" parent="." index="0"]
+transform = Transform3D(0.00116905, 0.000638952, 0.0632679, 0.0192047, 0.0602898, -0.000963732, -0.0602862, 0.0192182, 0.000919861, -1.20428, -0.199484, 0.317062)
+
+[node name="GPUTrail3D" type="GPUParticles3D" parent="handle_low_001" index="0"]
+transform = Transform3D(9.3542, -0.0280328, 12.7329, -12.7362, -0.015321, 9.35294, -0.0442252, -1.51708, -0.329735, -0.183853, 0.0756295, -3.2056)
+amount = 28
+lifetime = 28.0
+explosiveness = 1.0
+fixed_fps = 59
+process_material = SubResource("ShaderMaterial_b3upq")
+draw_pass_1 = SubResource("QuadMesh_oi7aq")
+script = ExtResource("5_88ny0")
+length = 28
+length_seconds = 0.474576
+texture = ExtResource("5_1vx1p")
+color_ramp = SubResource("GradientTexture1D_q6kld")
+curve = SubResource("CurveTexture_blcm3")
+_defaults_have_been_set = true
+metadata/_custom_type_script = "uid://cjlwu5lqd1gjj"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="handle_low_001" index="1"]
+transform = Transform3D(1.69728, -0.601371, -0.846928, 0.997725, -0.0629563, 1.49691, -0.382423, -2.83327, 0.146501, 0.368813, 0.318359, -3.8859)
+shape = SubResource("CapsuleShape3D_1vx1p")

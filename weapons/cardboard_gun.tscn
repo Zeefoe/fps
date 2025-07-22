@@ -1,0 +1,273 @@
+[gd_scene load_steps=13 format=3 uid="uid://cgqymcn20vm2e"]
+
+[ext_resource type="PackedScene" uid="uid://cr62y6djbh3cb" path="res://weapons/cardboard_gun.glb" id="1_4rtyq"]
+[ext_resource type="Script" uid="uid://78sdqgggcm01" path="res://weapons/cardboard_gun.gd" id="2_klrgx"]
+[ext_resource type="PackedScene" uid="uid://6bggv4w4xtqh" path="res://weapons/projectile.tscn" id="3_pqt2s"]
+[ext_resource type="AudioStream" uid="uid://dmyuyvfcr5v2n" path="res://weapons/sounds/deagle-shot-sounds-from-csgo.mp3" id="3_u8335"]
+[ext_resource type="PackedScene" uid="uid://c04x68feol6qi" path="res://weapons/knife.tscn" id="5_yir51"]
+
+[sub_resource type="Animation" id="Animation_hyqnq"]
+resource_name = "BulletAction"
+length = 3.625
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bullet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 2.5, -0.5, 0, 0.0333333, 1, 2.5, -0.5, 0, 0.0666667, 1, 2.51443, -0.557734, 0, 0.1, 1, 2.55152, -0.706094, 0, 0.133333, 1, 2.61433, -0.957326, 0, 0.166667, 1, 2.70076, -1.30303, 0, 0.2, 1, 2.81448, -1.75791, 0, 0.233333, 1, 2.94552, -2.28207, 0, 0.266667, 1, 3.09178, -2.86711, 0, 0.3, 1, 3.25116, -3.50464, 0, 0.333333, 1, 3.42156, -4.18625, 0, 0.366667, 1, 3.60246, -4.90986, 0, 0.4, 1, 3.78809, -5.65236, 0, 0.5, 1, 4.35231, -7.90924, 0, 0.533333, 1, 4.53321, -8.63285, 0, 0.566667, 1, 4.70624, -9.32496, 0, 0.6, 1, 4.8693, -9.97718, 0, 0.633333, 1, 5.02028, -10.5811, 0, 0.666667, 1, 5.15709, -11.1284, 0, 0.7, 1, 5.27081, -11.5832, 0, 0.733333, 1, 5.36406, -11.9562, 0, 0.766667, 1, 5.43474, -12.239, 0, 0.8, 1, 5.48076, -12.423, 0, 0.833333, 1, 5.5, -12.5, 0, 0.866667, 1, 5.4826, -12.4304, 0, 0.9, 1, 5.4409, -12.2636, 0, 0.933333, 1, 5.3767, -12.0068, 0, 0.966667, 1, 5.2918, -11.6672, 0, 1, 1, 5.188, -11.252, 0, 1.03333, 1, 5.0626, -10.7504, 0, 1.06667, 1, 4.9237, -10.1948, 0, 1.1, 1, 4.7731, -9.5924, 0, 1.13333, 1, 4.6126, -8.9504, 0, 1.16667, 1, 4.444, -8.276, 0, 1.2, 1, 4.2682, -7.5728, 0, 1.3, 1, 3.7318, -5.4272, 0, 1.33333, 1, 3.556, -4.724, 0, 1.36667, 1, 3.3874, -4.0496, 0, 1.4, 1, 3.2269, -3.4076, 0, 1.43333, 1, 3.0763, -2.8052, 0, 1.46667, 1, 2.9374, -2.2496, 0, 1.5, 1, 2.812, -1.748, 0, 1.53333, 1, 2.7082, -1.3328, 0, 1.56667, 1, 2.6233, -0.9932, 0, 1.6, 1, 2.5591, -0.736401, 0, 1.63333, 1, 2.5174, -0.569601, 0, 1.66667, 1, 2.5, -0.5, 0, 3.33333, 1, 2.5, -0.5, 0, 3.36667, 1, 2.5, 0.744441, -1.07467, 3.43333, 1, 2.5, 4.56667, -5.34535, 3.46667, 1, 2.5, 5.425, -7.35136, 3.5, 1, 2.5, 5.125, -8.75676, 3.53333, 1, 2.5, 3.02501, -11.3513, 3.56667, 1, 2.5, -5.37498, -15.7642, 3.6, 1, 2.5, -14.975, -19.7642, 3.625, 1, 2.5, -21.5, -22)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hammer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Magazine")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Slide")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Trigger")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -2, -2.5, 0)
+
+[sub_resource type="Animation" id="Animation_ukdw7"]
+resource_name = "Gun_bodyAction"
+length = 2.5
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bullet")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 2.5, -0.5, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hammer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Magazine")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Slide")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Trigger")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -2, -2.5, 0)
+
+[sub_resource type="Animation" id="Animation_thb5h"]
+resource_name = "HammerAction"
+length = 3.33333
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hammer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 2.06667, 1, 0, 0, 0, 1, 2.1, 1, 0, 0, -0.0360418, 0.99935, 2.13333, 1, 0, 0, -0.123285, 0.992371, 2.16667, 1, 0, 0, -0.254662, 0.96703, 2.2, 1, 0, 3.66348e-08, -0.323662, 0.946173, 2.23333, 1, 0, 4.57711e-08, -0.340663, 0.940185, 3.23333, 1, 0, 4.57711e-08, -0.340663, 0.940185, 3.26667, 1, 0, 2.7821e-08, -0.207065, 0.978327, 3.3, 1, -3.78872e-16, 8.32873e-09, -0.0619887, 0.998077, 3.33333, 1, -1.86535e-15, 4.1006e-08, -0.305198, 0.952289)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bullet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 2.5, -0.5, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Magazine")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Slide")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Trigger")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -2, -2.5, 0)
+
+[sub_resource type="Animation" id="Animation_tgbob"]
+resource_name = "MagazineAction"
+length = 2.5
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Magazine")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.0333333, 1, 0, 0, 0, 0.0666667, 1, 0.0144336, -0.0577344, 0, 0.1, 1, 0.0515235, -0.206094, 0, 0.133333, 1, 0.114332, -0.457326, 0, 0.166667, 1, 0.200758, -0.803033, 0, 0.2, 1, 0.314477, -1.25791, 0, 0.233333, 1, 0.445517, -1.78207, 0, 0.266667, 1, 0.591777, -2.36711, 0, 0.3, 1, 0.751159, -3.00464, 0, 0.333333, 1, 0.921563, -3.68625, 0, 0.366667, 1, 1.10246, -4.40986, 0, 0.4, 1, 1.28809, -5.15236, 0, 0.5, 1, 1.85231, -7.40924, 0, 0.533333, 1, 2.03321, -8.13285, 0, 0.566667, 1, 2.20624, -8.82496, 0, 0.6, 1, 2.3693, -9.47718, 0, 0.633333, 1, 2.52028, -10.0811, 0, 0.666667, 1, 2.65709, -10.6284, 0, 0.7, 1, 2.77081, -11.0832, 0, 0.733333, 1, 2.86406, -11.4562, 0, 0.766667, 1, 2.93474, -11.739, 0, 0.8, 1, 2.98076, -11.923, 0, 0.833333, 1, 3, -12, 0, 0.866667, 1, 2.9826, -11.9304, 0, 0.9, 1, 2.9409, -11.7636, 0, 0.933333, 1, 2.8767, -11.5068, 0, 0.966667, 1, 2.7918, -11.1672, 0, 1, 1, 2.688, -10.752, 0, 1.03333, 1, 2.5626, -10.2504, 0, 1.06667, 1, 2.4237, -9.6948, 0, 1.1, 1, 2.2731, -9.0924, 0, 1.13333, 1, 2.1126, -8.4504, 0, 1.16667, 1, 1.944, -7.776, 0, 1.2, 1, 1.7682, -7.0728, 0, 1.3, 1, 1.2318, -4.9272, 0, 1.33333, 1, 1.056, -4.224, 0, 1.36667, 1, 0.8874, -3.5496, 0, 1.4, 1, 0.7269, -2.9076, 0, 1.43333, 1, 0.5763, -2.3052, 0, 1.46667, 1, 0.4374, -1.7496, 0, 1.5, 1, 0.312, -1.248, 0, 1.53333, 1, 0.2082, -0.8328, 0, 1.56667, 1, 0.1233, -0.4932, 0, 1.6, 1, 0.0591002, -0.236401, 0, 1.63333, 1, 0.0174004, -0.0696014, 0, 1.66667, 1, 0, 0, 0, 2.5, 1, 0, 0, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bullet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 2.5, -0.5, 0)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hammer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Slide")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Trigger")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -2, -2.5, 0)
+
+[sub_resource type="Animation" id="Animation_e31dm"]
+resource_name = "SlideAction"
+length = 3.41667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Slide")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 2.06667, 1, 0, 0, 0, 2.1, 1, 0.0671998, 0, 0, 2.13333, 1, 0.259201, 0, 0, 2.16667, 1, 0.624, 0, 0, 2.2, 1, 1.1616, 0, 0, 2.23333, 1, 1.7856, 0, 0, 2.26667, 1, 2.4672, 0, 0, 2.33333, 1, 3.888, 0, 0, 2.36667, 1, 4.5408, 0, 0, 2.4, 1, 5.1072, 0, 0, 2.43333, 1, 5.5584, 0, 0, 2.46667, 1, 5.8656, 0, 0, 2.5, 1, 6, 0, 0, 2.53333, 1, 5.5008, 0, 0, 2.56667, 1, 4.4832, 0, 0, 2.6, 1, 3.1776, 0, 0, 2.63333, 1, 1.8144, 0, 0, 2.66667, 1, 0.624, 0, 0, 2.7, 1, 0.124799, 0, 0, 2.73333, 1, 0, 0, 0, 3.26667, 1, 0, 0, 0, 3.3, 1, 1.19999, 0, 0, 3.33333, 1, 6, 0, 0, 3.41667, 1, 0, 0, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bullet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 2.5, -0.5, 0)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hammer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Magazine")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Trigger")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -2, -2.5, 0)
+
+[sub_resource type="Animation" id="Animation_7hglr"]
+resource_name = "TriggerAction"
+length = 3.54167
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("Trigger")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -2, -2.5, 0, 3.1, 1, -2, -2.5, 0, 3.13333, 1, -1.9792, -2.5, 0, 3.16667, 1, -1.896, -2.5, 0, 3.2, 1, -1.6976, -2.5, 0, 3.23333, 1, -1.4704, -2.5, 0, 3.26667, 1, -1.2528, -2.5, 0, 3.3, 1, -1.0832, -2.5, 0, 3.36667, 1, -1.0832, -2.5, 0, 3.4, 1, -1.2528, -2.5, 0, 3.43333, 1, -1.4704, -2.5, 0, 3.46667, 1, -1.6976, -2.5, 0, 3.5, 1, -1.896, -2.5, 0, 3.54167, 1, -2, -2.5, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bullet")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 2.5, -0.5, 0)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hammer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("Magazine")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("Slide")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lw3jb"]
+_data = {
+&"BulletAction": SubResource("Animation_hyqnq"),
+&"Gun_bodyAction": SubResource("Animation_ukdw7"),
+&"HammerAction": SubResource("Animation_thb5h"),
+&"MagazineAction": SubResource("Animation_tgbob"),
+&"SlideAction": SubResource("Animation_e31dm"),
+&"TriggerAction": SubResource("Animation_7hglr")
+}
+
+[node name="cardboard_gun" instance=ExtResource("1_4rtyq")]
+script = ExtResource("2_klrgx")
+projectile_scene = ExtResource("3_pqt2s")
+
+[node name="AnimationPlayer" parent="." index="6"]
+libraries = {
+&"": SubResource("AnimationLibrary_lw3jb")
+}
+
+[node name="CooldownTimer" type="Timer" parent="." index="7"]
+wait_time = 0.5
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="8"]
+stream = ExtResource("3_u8335")
+
+[node name="ProjectileSpawnPoint" type="Marker3D" parent="." index="9"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.1478, -0.0165002, 0)
+
+[node name="Knife" parent="." index="10" instance=ExtResource("5_yir51")]
+transform = Transform3D(30.5942, 0, 0, 0, 30.5942, 0, 0, 0, 30.5942, 29.4557, 0, 12.5138)
+script = null
