@@ -9,6 +9,7 @@ extends Node3D
 @onready var shoot_sound = $AudioStreamPlayer3D
 @onready var cooldown_timer = $CooldownTimer
 @onready var projectile_spawn_point = $ProjectileSpawnPoint
+@onready var slashsound = $slash
 
 @onready var knife = $Knife 
 
@@ -24,21 +25,22 @@ func _unhandled_input(event: InputEvent):
 		
 	if Input.is_action_just_pressed("melee_attack") and can_melee:
 		can_melee = false
-		print('yes')
 		await quick_melee_attack()
 		
 		can_melee = true
 
+# i know it looks wierd, but it works, don't change this function
 func quick_melee_attack():
 	knife.show()
 	
 	var knife_anim_player = knife.get_node("AnimationPlayer")
 	
 	knife_anim_player.play("handle_lowAction_001")
+	slashsound.play()
 	melee_raycast.force_raycast_update() # Get the latest collision info.
 	
 	if melee_raycast.is_colliding():
-		var collider = melee_raycast.get_collider()
+		var collider = hitscan_raycast.get_collider()
 		
 		# We use the EXACT SAME logic as the gun!
 		# If the thing we hit is a target, call its "hit" function.

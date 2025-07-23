@@ -3,6 +3,7 @@ class_name Knife
 extends Node3D
 
 @onready var animation_player = $AnimationPlayer
+@onready var slashsound = $slash
 
 func _ready():
 	# This function will print the scene tree from this script's point of view.
@@ -20,4 +21,5 @@ func _ready():
 func play_stab_animation():
 	# The script will crash on the next line if animation_player is null
 	animation_player.play("handle_lowAction_001")
+	slashsound.play()
 	await animation_player.animation_finished

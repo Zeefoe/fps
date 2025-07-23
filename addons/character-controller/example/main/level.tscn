@@ -36,7 +36,7 @@ ssao_enabled = true
 glow_enabled = true
 fog_light_energy = 5.4
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.044
+volumetric_fog_density = 0.036
 
 [sub_resource type="BoxMesh" id="BoxMesh_m6qci"]
 lightmap_size_hint = Vector2i(14, 21)
@@ -127,6 +127,7 @@ transform = Transform3D(-1.53281e-09, 0, -0.0350667, 0, 0.0350667, 0, 0.0350667,
 target_position = Vector3(0, -1, -2000)
 
 [node name="MeleeRaycast" type="RayCast3D" parent="Player/Head/FirstPersonCameraReference/Camera3D"]
+target_position = Vector3(0, 0, -500)
 
 [node name="ArenaGeometry" type="Node3D" parent="."]
 
@@ -140,7 +141,6 @@ transform = Transform3D(0.916531, -0.368076, -0.156498, 0.31918, 0.4373, 0.84076
 shadow_enabled = true
 
 [node name="map" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="map"]
 transform = Transform3D(29.8609, 0, 0, 0, 1, 0, 0, 0, 23.6163, 0, 0, 0)
@@ -188,6 +188,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32445, 1.5, -8.83205)
 [node name="Target3" parent="map" instance=ExtResource("14_w25cx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08935, 1.5, 8.43462)
 
+[node name="Target5" parent="map" instance=ExtResource("14_w25cx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.03836, 1.46002, -1.59337)
+
 [node name="Target4" parent="map" instance=ExtResource("14_w25cx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.49242, 1.5, 6.90237)
 
@@ -200,6 +203,13 @@ transform = Transform3D(-0.233982, 0, 0.187757, 0, 0.3, 0, -0.187757, 0, -0.2339
 [node name="OmniLight3D" type="OmniLight3D" parent="map"]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 1.46222, 2.9159, 3.62274)
 visible = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 3.39265, 6.88516, 1.47075)
+light_energy = 17.605
+shadow_enabled = true
+spot_range = 8.86931
+spot_angle = 26.4912
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -94.7065)

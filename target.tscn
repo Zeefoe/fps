@@ -13,6 +13,7 @@ add_uv2 = true
 script = ExtResource("1_e1yvt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+gi_mode = 2
 mesh = SubResource("CylinderMesh_e1yvt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

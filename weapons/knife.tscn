@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c04x68feol6qi"]
+[gd_scene load_steps=14 format=3 uid="uid://c04x68feol6qi"]
 
 [ext_resource type="PackedScene" uid="uid://cb47n3c8uy3j5" path="res://weapons/knifecourse.glb" id="1_yyc7w"]
 [ext_resource type="Script" uid="uid://c6x2g86rgk2eo" path="res://weapons/knife.gd" id="2_mjnv2"]
@@ -38,8 +38,6 @@ shader_parameter/flags = 40
 [sub_resource type="QuadMesh" id="QuadMesh_oi7aq"]
 material = SubResource("ShaderMaterial_ktjgf")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1vx1p"]
-
 [node name="Knife" instance=ExtResource("1_yyc7w")]
 script = ExtResource("2_mjnv2")
 
@@ -62,7 +60,3 @@ color_ramp = SubResource("GradientTexture1D_q6kld")
 curve = SubResource("CurveTexture_blcm3")
 _defaults_have_been_set = true
 metadata/_custom_type_script = "uid://cjlwu5lqd1gjj"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="handle_low_001" index="1"]
-transform = Transform3D(1.69728, -0.601371, -0.846928, 0.997725, -0.0629563, 1.49691, -0.382423, -2.83327, 0.146501, 0.368813, 0.318359, -3.8859)
-shape = SubResource("CapsuleShape3D_1vx1p")
