@@ -1,9 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://6bggv4w4xtqh"]
+[gd_scene load_steps=15 format=3 uid="uid://6bggv4w4xtqh"]
 
 [ext_resource type="Script" uid="uid://b7envwy3vsimi" path="res://projectile.gd" id="1_wiw7v"]
 [ext_resource type="Shader" uid="uid://cbwdjyjtpawar" path="res://GPUTrail-main/shaders/trail.gdshader" id="2_6kaog"]
 [ext_resource type="Shader" uid="uid://bwkil6rogrmnd" path="res://GPUTrail-main/shaders/trail_draw_pass.gdshader" id="3_4cg4o"]
 [ext_resource type="Script" uid="uid://cjlwu5lqd1gjj" path="res://GPUTrail-main/GPUTrail3D.gd" id="4_mhcsc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6kaog"]
+emission_enabled = true
+emission = Color(0.929412, 0.443137, 0, 1)
+emission_energy_multiplier = 10.85
 
 [sub_resource type="SphereMesh" id="SphereMesh_wiw7v"]
 
@@ -48,6 +53,7 @@ wait_time = 3.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.23059, -2.84217e-14, 2.5411e-21, 2.84217e-14, 3.23059, 2.84217e-14, 1.69407e-21, -2.84217e-14, 3.23059, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_6kaog")
 mesh = SubResource("SphereMesh_wiw7v")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

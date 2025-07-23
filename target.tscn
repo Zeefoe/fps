@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://bs2f5fkyvygsg" path="res://target.gd" id="1_e1yvt"]
 [ext_resource type="AudioStream" uid="uid://dw1f0ahfg7xcd" path="res://weapons/sounds/glass-breaking-sound-effect-240679.mp3" id="2_5ebp1"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_uqips"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_e1yvt"]
+lightmap_size_hint = Vector2i(17, 19)
+add_uv2 = true
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ufrq1"]
 
@@ -11,7 +13,7 @@
 script = ExtResource("1_e1yvt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CylinderMesh_uqips")
+mesh = SubResource("CylinderMesh_e1yvt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_ufrq1")

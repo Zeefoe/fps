@@ -266,7 +266,7 @@ wait_time = 0.5
 stream = ExtResource("3_u8335")
 
 [node name="ProjectileSpawnPoint" type="Marker3D" parent="." index="9"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.1478, -0.0165002, 0)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 125.966, -0.0165002, 0)
 
 [node name="Knife" parent="." index="10" instance=ExtResource("5_yir51")]
 transform = Transform3D(30.5942, 0, 0, 0, 30.5942, 0, 0, 0, 30.5942, 29.4557, 0, 12.5138)
