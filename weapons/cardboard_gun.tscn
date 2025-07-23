@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cgqymcn20vm2e"]
+[gd_scene load_steps=17 format=3 uid="uid://cgqymcn20vm2e"]
 
 [ext_resource type="PackedScene" uid="uid://cr62y6djbh3cb" path="res://weapons/cardboard_gun.glb" id="1_4rtyq"]
 [ext_resource type="Script" uid="uid://78sdqgggcm01" path="res://weapons/cardboard_gun.gd" id="2_klrgx"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://dmyuyvfcr5v2n" path="res://weapons/sounds/deagle-shot-sounds-from-csgo.mp3" id="3_u8335"]
 [ext_resource type="PackedScene" uid="uid://c04x68feol6qi" path="res://weapons/knife.tscn" id="5_yir51"]
 [ext_resource type="AudioStream" uid="uid://b3owynti4rhvt" path="res://weapons/sounds/knife-slice-41231.mp3" id="6_7ntey"]
+[ext_resource type="AudioStream" uid="uid://d2aeh0lsj1gb5" path="res://weapons/sounds/empty-gun-shot-6209.mp3" id="7_elscs"]
+[ext_resource type="AudioStream" uid="uid://ouarpc7f3887" path="res://weapons/sounds/desert-eagle-168857.mp3" id="8_vsqas"]
 
 [sub_resource type="Animation" id="Animation_hyqnq"]
 resource_name = "BulletAction"
@@ -133,7 +135,7 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Magazine")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.0333333, 1, 0, 0, 0, 0.0666667, 1, 0.0144336, -0.0577344, 0, 0.1, 1, 0.0515235, -0.206094, 0, 0.133333, 1, 0.114332, -0.457326, 0, 0.166667, 1, 0.200758, -0.803033, 0, 0.2, 1, 0.314477, -1.25791, 0, 0.233333, 1, 0.445517, -1.78207, 0, 0.266667, 1, 0.591777, -2.36711, 0, 0.3, 1, 0.751159, -3.00464, 0, 0.333333, 1, 0.921563, -3.68625, 0, 0.366667, 1, 1.10246, -4.40986, 0, 0.4, 1, 1.28809, -5.15236, 0, 0.5, 1, 1.85231, -7.40924, 0, 0.533333, 1, 2.03321, -8.13285, 0, 0.566667, 1, 2.20624, -8.82496, 0, 0.6, 1, 2.3693, -9.47718, 0, 0.633333, 1, 2.52028, -10.0811, 0, 0.666667, 1, 2.65709, -10.6284, 0, 0.7, 1, 2.77081, -11.0832, 0, 0.733333, 1, 2.86406, -11.4562, 0, 0.766667, 1, 2.93474, -11.739, 0, 0.8, 1, 2.98076, -11.923, 0, 0.833333, 1, 3, -12, 0, 0.866667, 1, 2.9826, -11.9304, 0, 0.9, 1, 2.9409, -11.7636, 0, 0.933333, 1, 2.8767, -11.5068, 0, 0.966667, 1, 2.7918, -11.1672, 0, 1, 1, 2.688, -10.752, 0, 1.03333, 1, 2.5626, -10.2504, 0, 1.06667, 1, 2.4237, -9.6948, 0, 1.1, 1, 2.2731, -9.0924, 0, 1.13333, 1, 2.1126, -8.4504, 0, 1.16667, 1, 1.944, -7.776, 0, 1.2, 1, 1.7682, -7.0728, 0, 1.3, 1, 1.2318, -4.9272, 0, 1.33333, 1, 1.056, -4.224, 0, 1.36667, 1, 0.8874, -3.5496, 0, 1.4, 1, 0.7269, -2.9076, 0, 1.43333, 1, 0.5763, -2.3052, 0, 1.46667, 1, 0.4374, -1.7496, 0, 1.5, 1, 0.312, -1.248, 0, 1.53333, 1, 0.2082, -0.8328, 0, 1.56667, 1, 0.1233, -0.4932, 0, 1.6, 1, 0.0591002, -0.236401, 0, 1.63333, 1, 0.0174004, -0.0696014, 0, 1.66667, 1, 0, 0, 0, 2.5, 1, 0, 0, 0)
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.0333333, 1, 0, 0, 0, 0.1, 1, 0, -0.058, 0, 0.166667, 1, 0, -0.206, 0, 0.3, 1, 3, -20, 0, 0.7, 1, 0, -20, 0, 1.23333, 1, 0, -20, 0, 1.63333, 1, 2.9826, -11.9304, 0, 1.66666, 1, 2.9409, -11.7636, 0, 1.7, 1, 2.8767, -11.5068, 0, 1.73333, 1, 2.7918, -11.1672, 0, 1.76666, 1, 2.688, -10.752, 0, 1.79999, 1, 2.5626, -10.2504, 0, 1.83333, 1, 2.4237, -9.6948, 0, 1.86666, 1, 2.2731, -9.0924, 0, 1.89999, 1, 2.1126, -8.4504, 0, 1.93333, 1, 1.944, -7.776, 0, 1.96666, 1, 1.7682, -7.0728, 0, 2.16667, 1, 0, 0, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = true
 tracks/1/enabled = true
@@ -241,12 +243,23 @@ tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0)
 
+[sub_resource type="Animation" id="Animation_vsqas"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Magazine")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 2.06475, -8.25901, 0)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lw3jb"]
 _data = {
 &"BulletAction": SubResource("Animation_hyqnq"),
 &"Gun_bodyAction": SubResource("Animation_ukdw7"),
 &"HammerAction": SubResource("Animation_thb5h"),
 &"MagazineAction": SubResource("Animation_tgbob"),
+&"RESET": SubResource("Animation_vsqas"),
 &"SlideAction": SubResource("Animation_e31dm"),
 &"TriggerAction": SubResource("Animation_7hglr")
 }
@@ -254,6 +267,9 @@ _data = {
 [node name="cardboard_gun" instance=ExtResource("1_4rtyq")]
 script = ExtResource("2_klrgx")
 projectile_scene = ExtResource("3_pqt2s")
+
+[node name="Magazine" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06475, -8.25901, 0)
 
 [node name="AnimationPlayer" parent="." index="6"]
 libraries = {
@@ -275,3 +291,9 @@ script = null
 
 [node name="slash" type="AudioStreamPlayer3D" parent="." index="11"]
 stream = ExtResource("6_7ntey")
+
+[node name="EmptySound" type="AudioStreamPlayer3D" parent="." index="12"]
+stream = ExtResource("7_elscs")
+
+[node name="ReloadSound" type="AudioStreamPlayer3D" parent="." index="13"]
+stream = ExtResource("8_vsqas")

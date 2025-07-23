@@ -1,7 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctbjo1qy4qm3w"]
+[gd_scene load_steps=6 format=3 uid="uid://ctbjo1qy4qm3w"]
 
 [ext_resource type="Script" uid="uid://bs2f5fkyvygsg" path="res://target.gd" id="1_e1yvt"]
 [ext_resource type="AudioStream" uid="uid://dw1f0ahfg7xcd" path="res://weapons/sounds/glass-breaking-sound-effect-240679.mp3" id="2_5ebp1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e1yvt"]
+albedo_color = Color(1, 0.300051, 0.236805, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 1.65
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_e1yvt"]
 lightmap_size_hint = Vector2i(17, 19)
@@ -13,6 +19,7 @@ add_uv2 = true
 script = ExtResource("1_e1yvt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_e1yvt")
 gi_mode = 2
 mesh = SubResource("CylinderMesh_e1yvt")
 
