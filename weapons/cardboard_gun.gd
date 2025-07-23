@@ -60,7 +60,6 @@ func reload():
 	
 	is_reloading = false
 	update_ui()
-	print("Reloaded. Current ammo: ", current_ammo, " / ", reserve_ammo)
 
 func quick_melee_attack():
 	knife.show()
@@ -72,7 +71,6 @@ func quick_melee_attack():
 		var collider = melee_raycast.get_collider() 
 		if collider.is_in_group("targets") and collider.has_method("hit"):
 			collider.hit()
-			print("Melee hit:", collider.name)
 	await knife_anim_player.animation_finished
 	knife.hide()
 
@@ -102,11 +100,9 @@ func shoot():
 			projectile.global_transform = projectile_spawn_point.global_transform
 			projectile.look_at(hit_position)
 			
-		print("Shot! Ammo left: ", current_ammo)
 		update_ui()
 			
 	else:
-		print("Out of ammo!")
 		empty_sound.play()
 
 func update_ui():
